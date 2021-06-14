@@ -12,10 +12,10 @@ const time = document.getElementById('time'),
         min = today.getMinutes(),
         sec = today.getSeconds();
 
-        //24hr format
+        //24hr Format
         hour = hour % 12 || 12;
 
-        //Output time
+        //Output Time
 
         time.innerHTML = `${hour}<span> :<span>${addZeros(min)}<span> :<span>${addZeros(sec)}`;
         setTimeout(showTime, 1000 );        
@@ -30,6 +30,15 @@ const time = document.getElementById('time'),
     function setGreet() {
         let today = new Date(),
         hour = today.getHours();
+
+        if(hour < 12) {
+            //Morning
+            document.body.main.backgroundImage = "url()"
+        } else if (hour < 18) { 
+            //Afternoon
+        } else {
+            //Evening
+        }
 
     }
 
