@@ -31,16 +31,23 @@ const time = document.getElementById('time'),
         let today = new Date(),
         hour = today.getHours();
 
-        if(hour < 12) {
+        if (hour < 12) {
             //Morning
-            document.body.main.backgroundImage = "url()"
+            document.body.style.backgroundImage = "url('../img/11.jpg')";
+            greeting.textContent = 'ранку';
         } else if (hour < 18) { 
             //Afternoon
+            document.body.style.backgroundImage = "url('../img/22.jpg')";
+            greeting.textContent = 'дня';
         } else {
             //Evening
+            document.body.style.backgroundImage = "url('../img/33.jpg')";
+            greeting.textContent = 'вечора';
+            document.body.style.color = 'white';
         }
 
     }
 
     //Run
     showTime();
+    setGreet();
