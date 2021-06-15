@@ -13,7 +13,7 @@ const time = document.getElementById('time'),
         sec = today.getSeconds();
 
         //24hr Format
-        hour = hour % 12 || 12;
+        hour = hour % 24 || 12;
 
         //Output Time
 
