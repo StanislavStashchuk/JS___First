@@ -12,8 +12,11 @@ const time = document.getElementById('time'),
         min = today.getMinutes(),
         sec = today.getSeconds();
 
-        //24hr Format
-        hour = hour % 24 || 12;
+        // Set AM or PM
+        const amPm = hour >= 12 ? 'PM' : 'AM';
+
+        //12hr Format
+        hour = hour % 12 || 12;
 
         //Output Time
 
